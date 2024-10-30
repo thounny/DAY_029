@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thounny Keo | Creative Developer</title>
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- nav -->
+    <nav>
+      <div class="nav-1">
+        <p class="logo">thounny</p>
+        <p class="title">
+          creative <br />
+          developer
+        </p>
+      </div>
+      <div class="nav-2">
+        <p class="menu-btn">menu</p>
+        <p class="pattern"><img src="./assets/logo.png" class="logo" alt="logo"></p>
+      </div>
+      <div class="nav-3">
+        <p class="intro">intro</p>
+        <p class="pattern-2"><img src="./assets/logo_blue.png" class="logo" alt="logo"></p>
+      </div>
+    </nav>
+
+    <!-- site content -->
+    <div class="content-wrapper">
+      <div class="col-1 col">
+        <div class="header">
+          <h1>
+            Thounny <br />
+            Keo
+          </h1>
+        </div>
+        <div class="numbers">
+          <p>2024</p>
+          <div class="hr"></div>
+          <p>01 / </p>
+        </div>
+        <div class="hero-img">
+          <div class="img-revealer"></div>
+          <img src="./assets/blooming.gif" alt="thounny's eye" />
+        </div>
+        <div class="hero-img-info">
+          <p>role: creative developer & designer</p>
+          <p>field: frontend development, visual design, UI/UX</p>
+          <p>education: frontend development @ Year Up United</p>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/thounny" target="_blank" class="social-icon">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+          <a href="https://linkedin.com/in/thounny" target="_blank" class="social-icon">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a href="mailto:thounnykeo@gmail.com" class="social-icon">
+            <ion-icon name="mail-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="cta">
+          <div class="cta-btn">
+            <h3>view work <ion-icon name="arrow-forward-sharp"></ion-icon></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-2 col">
+        <div class="p-info">
+          <p>2023 / 2024</p>
+          <p>creative portfolio</p>
+        </div>
+        <div class="p-img">
+          <div class="p-img-wrap">
+            <img src="./assets/moon.gif" alt="moon HI8">
+          </div>
+          <div class="p-img-border"></div>
+        </div>
+        <div class="img">
+          <div class="img-data">
+            <div class="img-name">
+              <p>where art meets <br />development</p>
+            </div>
+            <div class="img-info">
+              <p>focus: frontend</p>
+              <p>style: creative</p>
+              <p>genre: web development</p>
+              <p>media: digital</p>
+            </div>
+          </div>
+          <div class="hr"></div>
+          <div class="price">
+            <p>projects</p>
+            <p id="amount">127+</p>
+          </div>
+        </div>
+        <div class="carousel">
+          <div class="arrow">
+            <ion-icon name="chevron-back-sharp"></ion-icon>
+          </div>
+          <p>127</p>
+          <div class="arrow">
+            <ion-icon name="chevron-forward-sharp"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline();
+
+    tl.from("nav", {
+      y: -100,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    })
+      .from(".header h1", {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      }, "-=0.5")
+      .from(".hero-img", {
+        scale: 0.8,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      }, "-=0.5")
+      .from(".social-links", {
+        opacity: 0,
+        x: -50,
+        duration: 0.8,
+        ease: "power3.out"
+      }, "-=0.3")
+      .from(".cta", {
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: "power3.out"
+      }, "-=0.5");
+
+
+  </script>
+</body>
+
+</html>
